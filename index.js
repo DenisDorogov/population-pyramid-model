@@ -8,14 +8,23 @@ const config = {
     {minAge: 35, maxAge: 39, value: 39.2},
     {minAge: 40, maxAge: 44, value: 8.7},
     {minAge: 45, maxAge: 49, value: 0.5},
+  ],
+  deathRate: [
+    {minAge: 15, maxAge: 19, value: 18.4},
+    {minAge: 20, maxAge: 24, value: 81.2},
+    {minAge: 25, maxAge: 29, value: 100.1},
+    {minAge: 30, maxAge: 34, value: 77.2},
+    {minAge: 35, maxAge: 39, value: 39.2},
+    {minAge: 40, maxAge: 44, value: 8.7},
+    {minAge: 45, maxAge: 49, value: 0.5},
   ]
 }
 
 let startPopulation = [
-  {age: 4, males: 20, females: 10},
-  {age: 3, males: 30, females: 20},
-  {age: 2, males: 40, females: 25},
-  {age: 1, males: 35, females: 50},
+  {age: 18, males: 20, females: 10},
+  {age: 17, males: 30, females: 20},
+  {age: 16, males: 40, females: 25},
+  {age: 15, males: 35, females: 50},
 ]
 let maxPopulationByGender = 0;
 
@@ -39,6 +48,7 @@ const lastYearBirthCalculator = () => {
   startPopulation.forEach(peoples => {
     result += Math.round(findBirthRate(peoples.age) * peoples.females)
   })
+  console.log(result);
 }
 
 const render = () => {

@@ -65,3 +65,30 @@
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
+.setting-container {
+  display: flex;
+  width: 60%;
+  height: 40%;
+  margin: 0 auto;
+  padding-inline: 10px;
+  padding-block: 10px;
+  background-color: #e4e4e4;
+}
+
+.button {
+  padding: 5px;
+  border: solid 1px green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.step {
+  background-color: green;
+}
+
+.step:hover {
+  opacity: 10;
+}
