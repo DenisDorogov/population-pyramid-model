@@ -37,16 +37,18 @@ const dataGenerator = () => {
 }
 
 const findBirthRate = (age) => {
-  let index = config.birthRate.findIndex(el => {
-    if (el.minAge <= age || el.maxAge >= age) return true;
+  let item = config.birthRate.find(el => {
+    console.log('findIndex', el.minAge, age, el.maxAge, el.minAge <= age && el.maxAge >= age);
+    el.minAge <= age && el.maxAge >= age
   })
-  return config.birthRate[index];
+  console.log('findBirthRate', item);
+  return item;
 }
 
 const lastYearBirthCalculator = () => {
   let result = 0;
   startPopulation.forEach(peoples => {
-    result += Math.round(findBirthRate(peoples.age) * peoples.females)
+    result = result + Math.round(findBirthRate(peoples.age) * peoples.females);
   })
   console.log(result);
 }
@@ -70,6 +72,11 @@ const render = () => {
     femaleParent.appendChild(femaleElement);
   })
 }
+
+let buttonStep = document.querySelector('#button-step');
+buttonStep.addEventListener('click', () => {
+  lastYearBirthCalculator();
+})
 
 dataGenerator();
 

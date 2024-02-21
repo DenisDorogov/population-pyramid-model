@@ -68,6 +68,7 @@
 
 .setting-container {
   display: flex;
+  justify-content: center;
   width: 60%;
   height: 40%;
   margin: 0 auto;
@@ -77,8 +78,8 @@
 }
 
 .button {
+  height: 30px;
   padding: 5px;
-  border: solid 1px green;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -86,9 +87,16 @@
 
 
 .step {
-  background-color: green;
+  background-color: #008500;
+  border: solid 1px #008500;
 }
 
 .step:hover {
-  opacity: 10;
+  background-color: #269926;
+  border: solid 1px #269926;
+}
+
+.step:active {
+  background-color: #67E667;
+  border: solid 1px #67E667;
 }
